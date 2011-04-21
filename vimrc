@@ -5,9 +5,9 @@ let mapleader=","
 
 set showbreak=>>
 
+colorscheme twilight
+
 if has("gui_running")
-  " colorscheme ir_black
-  colorscheme twilight
   set guioptions-=T " no toolbar
   set guioptions-=m " no menubar
   set gfn=Monospace\ 11
