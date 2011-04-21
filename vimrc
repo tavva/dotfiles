@@ -15,6 +15,11 @@ if has("gui_running")
   " Quick font size shifting
   map <F11> <ESC>:set gfn=Monospace\ 11<CR>
   map <F12> <ESC>:set gfn=Monospace\ 16<CR>
+
+  " Show line numbers
+  set relativenumber
+else
+  set number
 endif
 
 filetype plugin on
@@ -29,9 +34,6 @@ set showcmd
 
 " Show position
 set ruler
-
-" Show line numbers
-set relativenumber
 
 " Indentation...
 set autoindent smartindent
