@@ -19,7 +19,10 @@ if has("gui_running")
   " Show a red line to prevent long lines.
   set colorcolumn=80
 
-  " Show relative line numbers
+endif
+
+" Show line numbers
+if exists("&relativenumber")
   set relativenumber
 else
   set number
