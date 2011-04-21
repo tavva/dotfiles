@@ -16,9 +16,6 @@ if has("gui_running")
   map <F11> <ESC>:set gfn=Monospace\ 11<CR>
   map <F12> <ESC>:set gfn=Monospace\ 16<CR>
 
-  " Show a red line to prevent long lines.
-  set colorcolumn=80
-
 endif
 
 " Show line numbers
@@ -26,6 +23,11 @@ if exists("&relativenumber")
   set relativenumber
 else
   set number
+endif
+
+if exists("&colorcolumn")
+  " Show a red line to prevent long lines.
+  set colorcolumn=80
 endif
 
 filetype plugin on
