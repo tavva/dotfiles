@@ -16,6 +16,9 @@ if has("gui_running")
   map <F11> <ESC>:set gfn=Monospace\ 11<CR>
   map <F12> <ESC>:set gfn=Monospace\ 16<CR>
 
+  " Show a red line to prevent long lines.
+  set colorcolumn=80
+
   " Show line numbers
   set relativenumber
 else
@@ -90,9 +93,6 @@ set hlsearch
 
 " Clear search result highlighting.
 nnoremap <leader><space> :noh<cr>
-
-" Show a red line to prevent long lines.
-set colorcolumn=80
 
 " Map :Ack to something quicker.
 nnoremap <leader>a :Ack
