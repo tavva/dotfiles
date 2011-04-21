@@ -76,10 +76,12 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-" Use pathogen to easily modify the runtime path to include all plugins
-" under the ~/.vim/bundle directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+if has("pathogen")
+  " Use pathogen to easily modify the runtime path to include all plugins
+  " under the ~/.vim/bundle directory
+  call pathogen#helptags()
+  call pathogen#runtime_append_all_bundles()
+endif
 
 " Search case insensitive when term has no captitals - case sensitive
 " otherwise.
