@@ -173,6 +173,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey },            "z",     function () awful.util.spawn(browser) end),
     awful.key({ modkey, "Shift"   }, "z",     function () awful.util.spawn(secondary_browser) end),
     awful.key({ modkey },            "e",     function () awful.util.spawn("emacsclient -c") end),
+    awful.key({ modkey, "Control" }, "l",     function () awful.util.spawn("xscreensaver-command -lock") end),
 
     -- Standard
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
