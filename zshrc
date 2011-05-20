@@ -49,6 +49,16 @@ alias g="git gui"
 alias ip="ipython"
 alias s="sudo --"
 
+alias gp='git push'
+alias gb='git branch'
+alias gc='git checkout'
+alias gm='git commit -m'
+alias gd='git diff'
+alias gs='git status'
+alias gpb='git pull --rebase'
+alias gl='git log'
+alias ga='git add -p'
+
 alias msshpf="mssh {koopa,yoshi,birdo,goomba}.playfire.com"
 
 buildpf () {
