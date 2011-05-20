@@ -55,7 +55,7 @@ alias gc='git checkout'
 alias gm='git commit -m'
 alias gd='git diff'
 alias gs='git status'
-alias gpb='git pull --rebase'
+alias gpr='git pull --rebase'
 alias gl='git log'
 alias ga='git add -p'
 
