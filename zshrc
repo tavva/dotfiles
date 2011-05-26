@@ -62,9 +62,7 @@ alias ga='git add -p'
 alias msshpf="mssh {koopa,yoshi,birdo,goomba}.playfire.com"
 
 buildpf () {
-    git fetch
-    git reset --hard origin/master
-    git clean -fxd
+    git fetch && git checkout master && git reset --hard origin/master && git clean -fxd && g4mer/manage.py build live
 }
 
 f () {
