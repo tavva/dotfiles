@@ -67,7 +67,7 @@ buildpf () {
 }
 
 f () {
-    grep -irn $* .
+    grep -irn --exclude="*.pyc" $* .
 }
 
 alias quickweb='python -c "from SimpleHTTPServer import test; import sys; sys.argv = [None, 19028]; test()"'
