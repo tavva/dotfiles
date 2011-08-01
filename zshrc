@@ -59,6 +59,7 @@ alias gs='git status'
 alias gpr='git pull --rebase'
 alias gl='git log'
 alias ga='git add -p'
+alias gg='/usr/lib/git-core/git-gui'
 
 alias msshpf="mssh {koopa,yoshi,birdo,goomba}.playfire.com"
 
