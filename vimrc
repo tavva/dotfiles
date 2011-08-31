@@ -114,6 +114,11 @@ nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 " NERDTree is ace
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '\.swp$']
+let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+let NERDTreeShowBookmarks=1
+
 " Tab navigation
 map tl :tabnext<CR>
 map th :tabprev<CR>
