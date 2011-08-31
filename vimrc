@@ -67,10 +67,6 @@ imap jk <esc>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
-" Don't litter the working dir with swapfiles
-set backupdir=.backup,/tmp,.
-set directory=.backup,/tmp,.
-
 " Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
