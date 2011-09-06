@@ -131,3 +131,5 @@ set tags=~/tags
 let g:pydiction_location = '/home/ben/.vim/bundle/pydiction-1.2/complete-dict'
 
 set tabpagemax=15
+
+set autochdir
