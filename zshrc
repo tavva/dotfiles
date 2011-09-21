@@ -27,7 +27,7 @@ alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 
 alias pf="cd /home/ben/playfire"
 
-for MACHINE in koopa yoshi luigi wario birdo goomba pauline syrup
+for MACHINE in koopa yoshi luigi wario birdo goomba pauline syrup toadette
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.playfire.com screen -Dax"
 done
