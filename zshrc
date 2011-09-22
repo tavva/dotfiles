@@ -132,3 +132,7 @@ sss() {
 pi() {
 	scp $1 ben@ben-phillips.net:/home/ben/sites/ben-phillips.net/public/b/$2
 }
+
+redirect () {
+	sudo iptables -t nat -A OUTPUT -d localhost -p tcp --dport ${2} -j REDIRECT --to-ports ${1}
+}
