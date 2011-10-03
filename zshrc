@@ -23,6 +23,8 @@ export EDITOR="vim"
 export PAGER="most"
 export PATH=$PATH:/home/ben/bin
 
+export WORDCHARS=''
+
 alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 
 alias pf="cd /home/ben/playfire"
