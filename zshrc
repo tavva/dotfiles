@@ -23,7 +23,8 @@ export EDITOR="vim"
 export PAGER="most"
 export PATH=$PATH:/home/ben/bin
 
-export WORDCHARS=''
+autoload -U select-word-style
+select-word-style bash
 
 alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 
