@@ -133,3 +133,7 @@ let g:pydiction_location = '/home/ben/.vim/bundle/pydiction-1.2/complete-dict'
 set tabpagemax=15
 
 set autochdir
+
+" Don't litter the working dir with swapfiles
+set backupdir=.backup,/tmp,.
+set directory=.backup,/tmp,.
