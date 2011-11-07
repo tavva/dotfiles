@@ -28,7 +28,7 @@ select-word-style bash
 
 alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 
-alias pf="cd /home/ben/playfire"
+alias pf="cd /mnt/second/playfire/g4mer"
 
 for MACHINE in koopa yoshi luigi wario birdo goomba pauline syrup toadette hayzee jellybob kitty piranha
 do
