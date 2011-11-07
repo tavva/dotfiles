@@ -42,6 +42,9 @@ do
     alias ps${N}="ssh -t ben@playfirestage${N}.com screen -Dax"
 done
 
+alias sacs="sudo apt-cache search"
+alias sagi="sudo apt-get install"
+
 alias bp="ssh -t ben@174.143.153.134 screen -Dax"
 
 alias e="gvim -p"
