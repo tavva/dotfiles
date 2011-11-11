@@ -95,7 +95,7 @@ ff() {
 }
 
 m() {
-    gvim -p ~/playfire/migrations/$1*.py
+    gvim -p /mnt/second/playfire/migrations/$1*.py
 }
 
 sync_phone() {
