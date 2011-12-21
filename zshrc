@@ -144,3 +144,27 @@ pi() {
 redirect () {
 	sudo iptables -t nat -A OUTPUT -d localhost -p tcp --dport ${2} -j REDIRECT --to-ports ${1}
 }
+
+work() {
+	if [ -f "/etc/hosts.play" ]
+	then
+		return 1
+	fi
+
+	sudo cp /etc/hosts /etc/hosts.play
+
+	for HOSTNAME in reddit.com news.ycombinator.com facebook.com news.bbc.co.uk elementsthegame.com
+	do
+		echo "127.0.0.1	$HOSTNAME www.$HOSTNAME" | sudo tee -a /etc/hosts >/dev/null
+	done
+
+	echo "I: Entered work mode"
+}
+
+play() {
+	if [ -f "/etc/hosts.play" ]
+	then
+		echo "I: Leaving work mode."
+		sudo mv /etc/hosts.play /etc/hosts
+	fi
+}
