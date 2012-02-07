@@ -169,3 +169,13 @@ play() {
 		sudo mv /etc/hosts.play /etc/hosts
 	fi
 }
+
+check_and_push() {
+	git log --format="%s" | grep "^\.$" > /dev/null
+	retval=$?
+	if [ "$retval" -ne "0" ]; then
+		git push
+	else
+		echo "You have unmanaged commits, please add messages."
+	fi
+}
