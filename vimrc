@@ -137,3 +137,5 @@ set autochdir
 " Don't litter the working dir with swapfiles
 set backupdir=.backup,/tmp,.
 set directory=.backup,/tmp,.
+
+map <F6> :FastCommit<CR>
