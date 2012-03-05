@@ -49,6 +49,7 @@ autocmd FileType python set tabstop=4 shiftwidth=4|set expandtab|set softtabstop
 autocmd FileType html set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|set listchars=tab:>-,trail:_ list
 autocmd FileType htmldjango set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|set listchars=tab:>-,trail:_ list
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|set listchars=tab:>-,trail:_ list
+autocmd FileType css set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|set listchars=tab:>-,trail:_ list
 
 " Show statusbar and always show filename and row number
 set statusline=%F%m%r%h%w\ row=%l\ column=%v
