@@ -73,11 +73,11 @@ alias gam='git commit --amend'
 
 alias msshpf="mssh {koopa,yoshi,birdo,goomba}.playfire.com"
 
-buildpf () {
+buildpf() {
     git fetch && git checkout master && git reset --hard origin/master && git clean -fxd && g4mer/manage.py build live
 }
 
-f () {
+f() {
     grep -irn --exclude="*.pyc" $* .
 }
 
@@ -85,7 +85,7 @@ alias quickweb='python -c "from SimpleHTTPServer import test; import sys; sys.ar
 
 alias org='e ~/org/main.org'
 
-cdt () {
+cdt() {
     cd $(mktemp -p ~/temp/ -td cdt.XXXXXXXX)
     echo "Moved to $(pwd)"
 }
