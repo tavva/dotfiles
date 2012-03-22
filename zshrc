@@ -60,7 +60,6 @@ alias ip="ipython"
 alias s="sudo --"
 alias a="e *.py"
 
-alias gp='git push'
 alias gb='git branch'
 alias gc='git checkout'
 alias gm='git commit -m'
@@ -172,8 +171,8 @@ play() {
 	fi
 }
 
-check_and_push() {
-	git log --format="%s" | grep "^\.$" > /dev/null
+gp() {
+	git log origin.. --format="%s" | grep "^\.$" > /dev/null
 	retval=$?
 	if [ "$retval" -ne "0" ]; then
 		git push
