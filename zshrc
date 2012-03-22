@@ -180,3 +180,8 @@ gp() {
 		echo "You have unmanaged commits, please add messages."
 	fi
 }
+
+op() {
+	e /mnt/second/playfire/g4mer/${1}/*.py
+	e /mnt/second/playfire/templates/${1}/*
+}
