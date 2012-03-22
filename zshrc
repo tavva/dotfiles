@@ -30,6 +30,8 @@ alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 
 alias pf="cd /mnt/second/playfire/g4mer"
 alias pft="cd /mnt/second/playfire/templates"
+alias pfj="cd /mnt/second/playfire/media/static/js"
+alias pfc="cd /mnt/second/playfire/media/static/css"
 
 for MACHINE in koopa yoshi luigi wario birdo goomba pauline syrup toadette hayzee jellybob kitty piranha daisy sammi raspberry toodles
 do
