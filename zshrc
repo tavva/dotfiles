@@ -33,7 +33,7 @@ alias pft="cd /mnt/second/playfire/templates"
 alias pfj="cd /mnt/second/playfire/media/static/js"
 alias pfc="cd /mnt/second/playfire/media/static/css"
 
-for MACHINE in koopa yoshi luigi wario birdo goomba pauline syrup toadette hayzee jellybob kitty piranha daisy sammi raspberry toodles
+for MACHINE in koopa yoshi luigi wario birdo goomba pauline honey toadette hayzee jellybob kitty piranha daisy sammi raspberry toodles
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.playfire.com screen -Dax"
 done
