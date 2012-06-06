@@ -33,6 +33,9 @@ alias pft="cd /mnt/second/playfire/templates"
 alias pfj="cd /mnt/second/playfire/media/static/js"
 alias pfc="cd /mnt/second/playfire/media/static/css"
 
+alias acs="apt-cache search"
+alias sagi="sudo apt-get install"
+
 for MACHINE in koopa yoshi luigi wario birdo goomba pauline honey toadette hayzee jellybob kitty piranha daisy sammi raspberry toodles
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.playfire.com screen -Dax"
