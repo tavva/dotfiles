@@ -76,8 +76,6 @@ f() {
 
 alias quickweb='python -c "from SimpleHTTPServer import test; import sys; sys.argv = [None, 19028]; test()"'
 
-alias org='e ~/org/main.org'
-
 cdt() {
     cd $(mktemp -p ~/temp/ -td cdt.XXXXXXXX)
     echo "Moved to $(pwd)"
