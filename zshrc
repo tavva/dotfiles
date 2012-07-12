@@ -90,13 +90,6 @@ m() {
     gvim -p /mnt/second/playfire/migrations/$1*.py
 }
 
-sync_phone() {
-  if [ -d /mnt/phone/music ]
-  then
-    sudo rsync -rvvLtz --no-whole-file /home/ben/Music/nexus/ /mnt/phone/music/ --include="*/" --include="*.jpg" --include="*.mp3" --include="*.ogg" --exclude="*" --delete
-  fi
-}
-
 _ss() {
 	SCREENSHOT="$(mktemp)"
 	rm -f ${SCREENSHOT}
