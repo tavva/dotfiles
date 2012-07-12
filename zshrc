@@ -28,11 +28,6 @@ select-word-style bash
 
 alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 
-alias pf="cd /mnt/second/playfire/g4mer"
-alias pft="cd /mnt/second/playfire/templates"
-alias pfj="cd /mnt/second/playfire/media/static/js"
-alias pfc="cd /mnt/second/playfire/media/static/css"
-
 alias acs="apt-cache search"
 alias sagi="sudo apt-get install"
 
@@ -74,12 +69,6 @@ alias gl='git log'
 alias ga='git add -p'
 alias gg='/usr/lib/git-core/git-gui'
 alias gam='git commit --amend'
-
-alias msshpf="mssh {koopa,yoshi,birdo,goomba}.playfire.com"
-
-buildpf() {
-    git fetch && git checkout master && git reset --hard origin/master && git clean -fxd && g4mer/manage.py build live
-}
 
 f() {
     grep -irn --exclude="*.pyc" $* .
@@ -182,9 +171,4 @@ gp() {
 	else
 		echo "You have unmanaged commits, please add messages."
 	fi
-}
-
-op() {
-	e /mnt/second/playfire/g4mer/${1}/*.py
-	e /mnt/second/playfire/templates/${1}/*
 }
