@@ -130,6 +130,10 @@ redirect () {
 	sudo iptables -t nat -A OUTPUT -d localhost -p tcp --dport ${2} -j REDIRECT --to-ports ${1}
 }
 
+sm() {
+	cd ~/styleme/styleme
+}
+
 work() {
 	if [ -f "/etc/hosts.play" ]
 	then
