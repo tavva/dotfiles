@@ -159,6 +159,11 @@ play() {
 }
 
 gp() {
+	if [ -x "./manage.py" ]
+	then
+		./manage.py test --failfast "${@}" || return ${?}
+	fi
+
 	git log origin.. --format="%s" | grep "^\.$" > /dev/null
 	retval=$?
 	if [ "$retval" -ne "0" ]; then
