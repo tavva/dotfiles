@@ -71,7 +71,7 @@ alias gg='/usr/lib/git-core/git-gui'
 alias gam='git commit --amend'
 
 f() {
-    grep -irn --exclude="*.pyc" $* .
+    grep -irn --exclude="*.pyc" --exclude-dir="*migrations*" $* .
 }
 
 alias quickweb='python -c "from SimpleHTTPServer import test; import sys; sys.argv = [None, 19028]; test()"'
