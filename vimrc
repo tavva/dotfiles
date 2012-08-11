@@ -33,6 +33,8 @@ endif
 filetype plugin on
 filetype indent on
 
+au BufRead,BufNewFile *.email	setfiletype html
+
 set title
 
 " Command completion
