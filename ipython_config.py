@@ -56,7 +56,7 @@ try:
             try:
                 return User.objects.get(first_name=first, last_name=last)
             except User.DoesNotExist:
-                psdd
+                pass
 
         raise User.DoesNotExist()
     u = memoize(u, {}, 1)
