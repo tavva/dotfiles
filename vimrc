@@ -30,6 +30,12 @@ if exists("&colorcolumn")
   set colorcolumn=80
 endif
 
+" Use pathogen to easily modify the runtime path to include all plugins
+" under the ~/.vim/bundle directory
+filetype off
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 filetype plugin on
 filetype indent on
 
@@ -79,11 +85,6 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-
-" Use pathogen to easily modify the runtime path to include all plugins
-" under the ~/.vim/bundle directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
 
 " Search case insensitive when term has no captitals - case sensitive
 " otherwise.
