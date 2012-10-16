@@ -172,3 +172,21 @@ gp() {
 		echo "You have unmanaged commits, please add messages."
 	fi
 }
+
+ssw() {
+	echo "Select a window..."
+	_target="$(mktemp).png"
+	scrot --select ${_target}
+	imgur ${_target}
+}
+
+imgur() {
+	for FILENAME in "$@"
+	do
+		curl --silent -F "image=@${FILENAME}" \
+			-F "key=cca1d7195d0d8bd11f622cae37d375e0" \
+			http://api.imgur.com/2/upload.xml | \
+			grep -Eo "<original>(.)*</original>" | \
+			grep -Eo "http://i.imgur.com/[^<]*";
+	done
+}
