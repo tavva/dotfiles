@@ -143,3 +143,5 @@ set backupdir=.backup,/tmp,.
 set directory=.backup,/tmp,.
 
 map <F6> :FastCommit<CR>
+
+:nnoremap <silent><leader><C-]> <C-w><C-]><C-w>T
