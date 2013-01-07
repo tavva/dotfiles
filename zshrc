@@ -162,6 +162,7 @@ play() {
 gp() {
 	if [ -x "./manage.py" ]
 	then
+		find . -name "*.pyc" -delete
 		./manage.py test --failfast "${@}" || return ${?}
 	fi
 
