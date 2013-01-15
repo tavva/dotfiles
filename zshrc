@@ -134,6 +134,9 @@ redirect () {
 sm() {
 	cd ~/styleme/styleme
 }
+smt() {
+	cd ~/styleme/templates
+}
 
 work() {
 	if [ -f "/etc/hosts.play" ]
