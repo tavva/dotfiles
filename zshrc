@@ -124,7 +124,7 @@ sss() {
 }
 
 pi() {
-	scp $1 ben@ben-phillips.net:/home/ben/sites/ben-phillips.net/public/b/$2
+	scp $1 ben@ben-phillips.net:/home/ben/sites/ben-phillips.net.static/public/b/$2
 }
 
 redirect () {
