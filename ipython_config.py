@@ -67,10 +67,7 @@ try:
     try:
         cursor = connection.cursor()
 
-        try:
-            user = u('ben')
-        except User.DoesNotExist:
-            user = u('ben@ben-phillips.net')
+        user = u('ben@ben-phillips.net')
 
         locals()['ben'] = user
 
