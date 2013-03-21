@@ -61,6 +61,10 @@ try:
         raise User.DoesNotExist()
     u = memoize(u, {}, 1)
 
+    for model in models.get_models():
+        globals()['%s_%s' % (model._meta.app_label, model._meta.object_name)] = model
+        del model
+
     def a(app_name):
          globals().update(models.get_app(app_name).__dict__)
 
