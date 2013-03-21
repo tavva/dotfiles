@@ -65,9 +65,6 @@ try:
         globals()['%s_%s' % (model._meta.app_label, model._meta.object_name)] = model
         del model
 
-    def a(app_name):
-         globals().update(models.get_app(app_name).__dict__)
-
     try:
         cursor = connection.cursor()
 
