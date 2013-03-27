@@ -1,0 +1,13 @@
+[user]
+	name = Ben Phillips
+	email = ben@thread.com
+[color]
+	ui = true
+[push]
+	default = current
+[core]
+	pager = less
+[alias]
+	exec = "!exec "
+	test = !`find -maxdepth 2 -name manage.py` test
+	conflicts = diff --name-only --diff-filter=U
