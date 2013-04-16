@@ -91,11 +91,6 @@ noremap   <Right>  <NOP>
 set ignorecase
 set smartcase
 
-" Highlight search results as I type.
-set incsearch
-set showmatch
-set hlsearch
-
 " Clear search result highlighting.
 nnoremap <leader><space> :noh<cr>
 
