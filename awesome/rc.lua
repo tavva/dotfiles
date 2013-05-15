@@ -370,3 +370,5 @@ awful.util.spawn("setxkbmap -option caps:super")
 --awful.util.spawn_with_shell("/usr/bin/gajim")
 --awful.util.spawn_with_shell("/usr/bin/rhythmbox-client")
 --awful.util.spawn_with_shell("/usr/bin/workrave")
+
+naughty.config.default_preset.position = "top_left"
