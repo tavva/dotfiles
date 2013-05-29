@@ -68,7 +68,7 @@ try:
     try:
         cursor = connection.cursor()
 
-        user = u('ben@ben-phillips.net')
+        user = u('ben@thread.com')
 
         locals()['ben'] = user
 
