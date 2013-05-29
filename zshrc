@@ -39,6 +39,7 @@ done
 alias andre="ssh -t ben@andre.adm.heya.com screen -Dax"
 alias burberry="ssh -t ben@burberry.vm.bytemark.co.uk screen -Dax"
 alias ford="ssh -t ben@ford.adm.thread.com screen -Dax"
+alias mcqueen="ssh -t ben@mcqueen.adm.thread.com screen -Dax"
 
 for N in 1 2
 do
