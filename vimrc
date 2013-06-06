@@ -15,6 +15,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Unite
 NeoBundleFetch 'Shougo/unite.vim'
 
+NeoBundleFetch 'tpope/vim-surround'
+
 filetype plugin indent on
 syntax enable
 
