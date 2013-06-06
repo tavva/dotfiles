@@ -1,5 +1,32 @@
 set nocompatible
-syntax on
+
+" NeoBundle
+"===============
+
+if has ('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Unite
+NeoBundleFetch 'Shougo/unite.vim'
+
+filetype plugin indent on
+syntax enable
+
+NeoBundleCheck
+
+" Local Settings
+"===============
+
+try
+  source ~/.vimrc.local
+catch
+endtry
 
 let mapleader=","
 
@@ -30,8 +57,6 @@ if exists("&colorcolumn")
   set colorcolumn=80
 endif
 
-filetype plugin on
-filetype indent on
 
 au BufRead,BufNewFile *.email	setfiletype html
 
