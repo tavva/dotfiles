@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
 	url = git://github.com/Shougo/neobundle.vim
+[submodule ".vim/bundle/jedi-vim"]
+	path = .vim/bundle/jedi-vim
+	url = git://github.com/davidhalter/jedi-vim.git
