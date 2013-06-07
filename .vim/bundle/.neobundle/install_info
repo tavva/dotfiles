@@ -1,2 +1,0 @@
-2.0
-{'neobundle.vim': {'checked_time': 1370527167, 'installed_uri': 'git://github.com/Shougo/neobundle.vim.git', 'installed_path': '/home/ben/.vim/bundle/neobundle.vim', 'updated_time': '1370497483'}, 'vim-surround': {'checked_time': 1370527167, 'installed_uri': 'git://github.com/tpope/vim-surround.git', 'installed_path': '/home/ben/.vim/bundle/vim-surround', 'updated_time': '1358911585'}, 'unite.vim': {'checked_time': 1370527167, 'installed_uri': 'git://github.com/Shougo/unite.vim.git', 'installed_path': '/home/ben/.vim/bundle/unite.vim', 'updated_time': '1370514683'}}
