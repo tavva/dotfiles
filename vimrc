@@ -1,5 +1,8 @@
 set nocompatible
 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 filetype plugin indent on
 syntax enable
 
@@ -39,7 +42,6 @@ if exists("&colorcolumn")
   " Show a red line to prevent long lines.
   set colorcolumn=80
 endif
-
 
 au BufRead,BufNewFile *.email	setfiletype html
 
