@@ -120,3 +120,14 @@ map <F6> :FastCommit<CR>
 nnoremap <F3> :<C-u>GundoToggle<CR>
 
 :nnoremap <silent><leader><C-]> <C-w><C-]><C-w>T
+
+" Command line mode
+"===============
+
+" zsh like shortcuts
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+" Ctrl-[hl]: Move left/right by word
+cnoremap <c-b> <s-left>
+cnoremap <c-w> <s-right>
