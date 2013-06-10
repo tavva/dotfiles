@@ -76,7 +76,7 @@ f() {
     grep -irn --exclude="*.pyc" --exclude-dir="*migrations*" $* .
 }
 
-alias quickweb='python -c "from SimpleHTTPServer import test; import sys; sys.argv = [None, 19028]; test()"'
+alias quickweb='python -m SimpleHTTPServer'
 
 cdt() {
     cd $(mktemp -p ~/temp/ -td cdt.XXXXXXXX)
