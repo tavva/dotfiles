@@ -60,6 +60,16 @@ alias ip="ipython"
 alias s="sudo --"
 alias a="e *.py"
 
+ep () {
+	find ${@:-.} \
+		-maxdepth 1 \
+		-name "*.py" \
+		-not \( -name "__init__.py" -size -2c \) \
+		-not \( -lname '*' \) \
+		-print0 \
+	| xargs -0r gvim -p
+}
+
 alias gb='git branch'
 alias gc='git checkout'
 alias gm='git commit -m'
