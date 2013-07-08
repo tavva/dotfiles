@@ -29,7 +29,7 @@ try:
     from django.conf import settings
     from django.core.cache import cache
     from django.utils.functional import memoize
-    from django.contrib.auth.models import User, SiteProfileNotAvailable
+    from django.contrib.auth.models import User
     from django.db.models.expressions import F
     from django.core.urlresolvers import reverse, resolve
 
@@ -75,7 +75,7 @@ try:
         try:
             profile = user.get_profile()
             Profile = profile.__class__
-        except SiteProfileNotAvailable:
+        except AttributeError:
             pass
 
     except User.DoesNotExist:
