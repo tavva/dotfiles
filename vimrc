@@ -118,6 +118,7 @@ set directory=.backup,/tmp,.
 map <F6> :FastCommit<CR>
 
 nnoremap <F3> :<C-u>GundoToggle<CR>
+nnoremap <F4> :yss
 
 :nnoremap <silent><leader><C-]> <C-w><C-]><C-w>T
 
