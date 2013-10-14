@@ -83,6 +83,7 @@ alias gg='/usr/lib/git-core/git-gui'
 alias gam='git commit --amend'
 
 f() {
+    echo
     grep -irn --exclude="*.pyc" --exclude-dir="*migrations*" $* .
 }
 
@@ -94,7 +95,9 @@ cdt() {
 }
 
 ff() {
+    echo
     echo "find . -iname \"*$1*\""
+    echo
     find . -iname "*$1*"
 }
 
