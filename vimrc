@@ -132,3 +132,19 @@ cnoremap <c-e> <end>
 " Ctrl-[hl]: Move left/right by word
 cnoremap <c-b> <s-left>
 cnoremap <c-w> <s-right>
+
+" Reflow
+function! ReflowArgs (text)
+    let mx = '^\( *\)\(.*\)(\(.*\))$'
+    let l = matchstr(a:text, mx)
+
+    let spacing = substitute(l, mx, '\1', '')
+    let fname = substitute(l, mx, '\2', '')
+    let params_raw = substitute(substitute(l, mx, '\3', ''), ' ', '', 'g')
+
+    let params = join(map(split(params_raw, ","), 'spacing . "    " . v:val . ","'), "\r")
+
+    return spacing . fname . "(\r" . params . "\r" . spacing . ")"
+endfunction
+
+nnoremap <leader>s :.,.s/.*/\=ReflowArgs(submatch(0))/g<CR>:noh<CR>
