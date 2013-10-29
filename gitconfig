@@ -11,3 +11,4 @@
 	exec = "!exec "
 	test = !`find -maxdepth 2 -name manage.py` test
 	conflicts = diff --name-only --diff-filter=U
+	tree = log --oneline --decorate --graph
