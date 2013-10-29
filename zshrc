@@ -1,10 +1,10 @@
 # history
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=10000
+HISTSIZE=50000
+SAVEHIST=$HISTSIZE
 
 # options
-setopt appendhistory autocd extendedglob nobeep
+setopt appendhistory autocd extendedglob nobeep hist_ignore_all_dups
 
 # emacs keybindings
 bindkey -e
