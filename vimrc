@@ -43,8 +43,6 @@ if exists("&colorcolumn")
   set colorcolumn=80
 endif
 
-au BufRead,BufNewFile *.email	setfiletype html
-
 set title
 
 " Command completion
@@ -63,6 +61,7 @@ autocmd FileType htmldjango set tabstop=2|set shiftwidth=2|set expandtab|set sof
 autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|set listchars=tab:>-,trail:_ list
 autocmd FileType css set tabstop=2|set shiftwidth=2|set expandtab|set softtabstop=2|set listchars=tab:>-,trail:_ list
 
+autocmd BufRead,BufNewFile *.email set filetype=html
 autocmd BufRead,BufNewFile *.css,*.scss set filetype=css
 
 " Show statusbar and always show filename and row number
