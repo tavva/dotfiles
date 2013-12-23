@@ -55,6 +55,31 @@ for s = 1, screen.count() do
 end
 -- }}}
 
+
+resize = function(width, height, text)
+  return function(c)
+    local w = capi.screen[c.screen].workarea
+    local geo = c:geometry()
+
+    awful.client.floating.set(c, true)
+    -- Float before raising
+    c:raise()
+    naughty.notify({ text = text, timeout = 0.5 })
+
+    c:geometry({
+      x = geo.x,
+      -- Constrain Y to workspace or it can start too high
+      y = (w.y > geo["y"]) and w.y or geo["y"],
+      width = width,
+      height = height,
+    })
+  end
+end
+
+resize_reset = function (c)
+  awful.client.floating.set(c, false)
+end
+
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
@@ -246,6 +271,11 @@ clientkeys = awful.util.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
         end)
+    awful.key({ modkey, }, "a", resize( 460, 650, "Extra small")),
+    awful.key({ modkey, }, "b", resize( 780, 750, "Small")),
+    awful.key({ modkey, }, "c", resize(1024, 800, "Medium")),
+    awful.key({ modkey, }, "d", resize(1250, 850, "Large")),
+    awful.key({ modkey, }, "e", resize_reset)
 )
 
 -- Compute the maximum number of digit we need, limited to 9
