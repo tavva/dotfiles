@@ -3,6 +3,10 @@ HISTFILE=~/.histfile
 HISTSIZE=50000
 SAVEHIST=$HISTSIZE
 
+if [ -n "$DISPLAY" ]; then
+	xset b off
+fi
+
 # options
 setopt appendhistory autocd extendedglob nobeep hist_ignore_all_dups
 
