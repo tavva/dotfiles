@@ -63,8 +63,8 @@ try:
 
     try:
         def o(val):
-                from styleme.orders.models import Order
-                return Order.objects.get(pk=val)
+            from styleme.orders.models import Order
+            return Order.objects.get(pk=val)
         o = memoize(o, {}, 1)
     except ImportError:
         pass
