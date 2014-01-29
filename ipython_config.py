@@ -32,10 +32,12 @@ try:
     from django.contrib.auth.models import User
     from django.db.models.expressions import F
     from django.core.urlresolvers import reverse, resolve
+    from django.contrib.auth.models import User
+
+    User.__unicode__ = lambda x: x.get_full_name()
 
     def u(val):
         # For ipython
-        from django.contrib.auth.models import User
         if not isinstance(val, basestring):
             return User.objects.get(pk=val)
 
