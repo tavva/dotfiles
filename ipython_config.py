@@ -61,6 +61,14 @@ try:
         raise User.DoesNotExist()
     u = memoize(u, {}, 1)
 
+    try:
+        def o(val):
+                from styleme.orders.models import Order
+                return Order.objects.get(pk=val)
+        o = memoize(o, {}, 1)
+    except ImportError:
+        pass
+
     for model in models.get_models():
         globals()['%s_%s' % (model._meta.app_label, model._meta.object_name)] = model
         del model
