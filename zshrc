@@ -89,7 +89,7 @@ f() {
 alias quickweb='python -m SimpleHTTPServer'
 
 cdt() {
-    cd $(mktemp -p ~/temp/ -td cdt.XXXXXXXX)
+    cd $(mktemp -d --tmpdir=/home/ben/temp cdt.XXXXXXXXX)
     echo "Moved to $(pwd)"
 }
 
