@@ -35,11 +35,6 @@ alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 alias acs="apt-cache search"
 alias sagi="sudo apt-get install"
 
-for MACHINE in koopa yoshi luigi wario birdo goomba pauline honey toadette hayzee jellybob kitty piranha daisy sammi raspberry toodles
-do
-    alias ${MACHINE}="ssh -t ben@${MACHINE}.playfire.com screen -Dax"
-done
-
 for MACHINE in andre burberry ford mcqueen westwood
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
