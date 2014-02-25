@@ -40,7 +40,7 @@ do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.playfire.com screen -Dax"
 done
 
-for MACHINE in andre burberry ford mcqueen
+for MACHINE in andre burberry ford mcqueen westwood
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
 done
