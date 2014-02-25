@@ -104,7 +104,9 @@ map td :tabclose<CR>
 
 map <leader>ip oimport ipdb; ipdb.set_trace()<Esc>
 
+" Tags and tag navigation
 set tags=~/tags
+map <leader>] :tnext<CR>
 
 let g:pydiction_location = '/home/ben/.vim/bundle/pydiction-1.2/complete-dict'
 
