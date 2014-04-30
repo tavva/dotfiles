@@ -209,3 +209,11 @@ play() {
 		sudo mv /etc/hosts.play /etc/hosts
 	fi
 }
+
+commit() {
+	google-chrome https://github.com/thread/styleme/commit/$1
+}
+
+ticket() {
+	google-chrome https://thread.fogbugz.com/default.asp?$1
+}
