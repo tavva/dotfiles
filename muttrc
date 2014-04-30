@@ -1,0 +1,41 @@
+source "gpg -dq $HOME/.pwds.gpg |"
+
+set from = "ben@thread.com"
+set realname = "Ben Phillips"
+
+account-hook imap://gmail/ "set
+
+set imap_user = "ben@othernation.com"
+set imap_pass = $my_mail_password
+
+set smtp_url = "smtp://ben@othernation.com@smtp.gmail.com:587/"
+set smtp_pass = $my_mail_password
+
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed="+[Gmail]/Drafts"
+set trash="+[Gmail]/Trash"
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set move=no
+set imap_keepalive=900
+set timeout=15
+auto_view text/html
+
+set sort=threads
+set sort_aux=last-date-received
+
+set query_command="goobook query '%s'"
+bind editor <Tab> complete-query
+macro index,pager a "<pipe-message>goobook add<return>" "Add the sender address to Google contacts"
+
+# Gmail-style keyboard shortcuts
+macro index,pager y "<save-message>=[Gmail]/All Mail<enter><enter>" "Gmail archive message"
+macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[Google Mail]/Bin\"\n <delete-message>" "Gmail delete message"
+#macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+#macro index,pager ga "<change-folder>=[<tab>/All<tab><enter>" "Go to all mail"
+#macro index,pager gs "<change-folder>=[<tab>Starred<enter>" "Go to starred messages"
+#macro index,pager gd "<change-folder>=[<tab>Drafts<enter>" "Go to drafts"
