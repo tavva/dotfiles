@@ -35,7 +35,7 @@ alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 alias acs="apt-cache search"
 alias sagi="sudo apt-get install"
 
-for MACHINE in andre burberry ford mcqueen westwood
+for MACHINE in andre burberry ford mcqueen westwood sander
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
 done
