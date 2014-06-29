@@ -25,7 +25,7 @@ RPROMPT='[%* on %W]'
 
 export EDITOR="vim"
 export PAGER="most"
-export PATH=$PATH:/home/ben/bin
+export PATH=$PATH:$HOME/go
 
 autoload -U select-word-style
 select-word-style bash
