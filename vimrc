@@ -16,6 +16,7 @@ let g:SuperTabLongestHighlight=1
 Bundle 'scrooloose/syntastic'
 let g:syntastic_python_checkers=['pyflakes']
 
+Bundle 'bling/vim-airline'
 Bundle 'fatih/vim-go'
 
 " call vundle#end()
