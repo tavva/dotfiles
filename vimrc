@@ -7,7 +7,16 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/gundo.vim'
-Bundle 'Shougo/neocomplcache.vim'
+
+Bundle 'davidhalter/jedi-vim.git'
+
+Bundle 'ervandew/supertab'
+let g:SuperTabLongestHighlight=1
+
+Bundle 'scrooloose/syntastic'
+let g:syntastic_python_checkers=['pyflakes']
+
+" call vundle#end()
 
 filetype plugin indent on
 
@@ -51,56 +60,6 @@ if exists("&colorcolumn")
 endif
 
 set title
-
-"" == Autocompletion ==
-
-let g:neocomplcache_enable_at_startup=1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-\ }
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplcache#smart_close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-"" == End Autocompletion ==
-
 
 " Command completion
 set wildmenu
@@ -159,8 +118,6 @@ map th :tabprev<CR>
 map tn :tabnew<CR>
 map td :tabclose<CR>
 
-map <leader>ip oimport ipdb; ipdb.set_trace()<Esc>
-
 " Tags and tag navigation
 set tags=~/tags
 map <leader>] :tnext<CR>
@@ -180,16 +137,7 @@ nnoremap <F4> :yss
 
 :nnoremap <silent><leader><C-]> <C-w><C-]><C-w>T
 
-" Command line mode
-"===============
-
-" zsh like shortcuts
-cnoremap <c-a> <home>
-cnoremap <c-e> <end>
-
-" Ctrl-[hl]: Move left/right by word
-cnoremap <c-b> <s-left>
-cnoremap <c-w> <s-right>
+map <leader>ip oimport ipdb; ipdb.set_trace()<Esc>
 
 " Reflow
 function! ReflowArgs (text)
@@ -206,3 +154,14 @@ function! ReflowArgs (text)
 endfunction
 
 nnoremap <leader>s :.,.s/.*/\=ReflowArgs(submatch(0))/g<CR>:noh<CR>
+
+" Command line mode
+"===============
+
+" zsh like shortcuts
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+
+" Ctrl-[hl]: Move left/right by word
+cnoremap <c-b> <s-left>
+cnoremap <c-w> <s-right>
