@@ -25,6 +25,10 @@ filetype plugin indent on
 
 syntax enable
 
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'vim-scripts/twilight'
+colorscheme twilight
+
 " Local Settings
 "===============
 
@@ -37,7 +41,6 @@ let mapleader=","
 
 set showbreak=>>
 
-colorscheme twilight
 
 if has("gui_running")
   set guioptions-=T " no toolbar
