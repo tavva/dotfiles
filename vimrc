@@ -16,6 +16,8 @@ let g:SuperTabLongestHighlight=1
 Bundle 'scrooloose/syntastic'
 let g:syntastic_python_checkers=['pyflakes']
 
+Bundle 'fatih/vim-go'
+
 " call vundle#end()
 
 filetype plugin indent on
