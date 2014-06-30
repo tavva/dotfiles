@@ -4,20 +4,20 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'sjl/gundo.vim'
 
-Bundle 'davidhalter/jedi-vim.git'
-Bundle 'ervandew/supertab'
+Plugin 'davidhalter/jedi-vim.git'
+Plugin 'ervandew/supertab'
 let g:SuperTabLongestHighlight=1
 
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers=['pyflakes']
 
-Bundle 'bling/vim-airline'
-Bundle 'fatih/vim-go'
+Plugin 'bling/vim-airline'
+Plugin 'fatih/vim-go'
 
 " call vundle#end()
 
@@ -25,7 +25,7 @@ filetype plugin indent on
 
 syntax enable
 
-Bundle 'vim-scripts/twilight'
+Plugin 'vim-scripts/twilight'
 colorscheme twilight
 
 " Local Settings
