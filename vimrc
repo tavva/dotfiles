@@ -5,11 +5,11 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/gundo.vim'
 
 Bundle 'davidhalter/jedi-vim.git'
-
 Bundle 'ervandew/supertab'
 let g:SuperTabLongestHighlight=1
 
