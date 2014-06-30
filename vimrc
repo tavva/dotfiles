@@ -25,7 +25,6 @@ filetype plugin indent on
 
 syntax enable
 
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/twilight'
 colorscheme twilight
 
