@@ -17,7 +17,6 @@ Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers=['pyflakes']
 
 Plugin 'bling/vim-airline'
-Plugin 'fatih/vim-go'
 
 " call vundle#end()
 
