@@ -9,7 +9,6 @@ Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-surround'
 Plugin 'sjl/gundo.vim'
 Plugin 'docunext/closetag.vim'
-Plugin 'skammer/vim-css-color'
 
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
