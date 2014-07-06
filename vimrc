@@ -17,6 +17,14 @@ let g:SuperTabLongestHighlight=1
 Plugin 'scrooloose/syntastic'
 let g:syntastic_python_checkers=['pyflakes']
 
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 Plugin 'bling/vim-airline'
 
 " call vundle#end()
