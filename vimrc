@@ -12,9 +12,6 @@ Plugin 'sjl/gundo.vim'
 
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
-Plugin 'majutsushi/tagbar'
-nnoremap <leader>l :TagbarToggle<CR>
-
 let g:SuperTabLongestHighlight=1
 
 Plugin 'scrooloose/syntastic'
