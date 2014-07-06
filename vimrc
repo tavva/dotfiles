@@ -13,6 +13,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'lilydjwg/colorizer'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'kien/rainbow_parentheses.vim'
 nnoremap b :RainbowParenthesesToggle <CR>
