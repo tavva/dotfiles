@@ -14,6 +14,7 @@ Plugin 'lilydjwg/colorizer'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'Lokaltog/vim-easymotion'
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
 let g:SuperTabLongestHighlight=1
