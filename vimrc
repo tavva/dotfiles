@@ -11,9 +11,6 @@ Plugin 'sjl/gundo.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'skammer/vim-css-color'
 
-Plugin 'tpope/vim-surround'
-Plugin 'sjl/gundo.vim'
-
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
 let g:SuperTabLongestHighlight=1
