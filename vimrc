@@ -14,6 +14,9 @@ Plugin 'lilydjwg/colorizer'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'kien/rainbow_parentheses.vim'
+nnoremap b :RainbowParenthesesToggle <CR>
+
 Plugin 'Lokaltog/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
 nmap f <Plug>(easymotion-bd-w)
