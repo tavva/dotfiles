@@ -15,6 +15,9 @@ Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'Lokaltog/vim-easymotion'
+let g:EasyMotion_do_mapping = 0
+nmap f <Plug>(easymotion-bd-w)
+
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
 let g:SuperTabLongestHighlight=1
