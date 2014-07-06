@@ -11,6 +11,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'docunext/closetag.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'lilydjwg/colorizer'
+Plugin 'tpope/vim-abolish'
 
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
