@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+let mapleader=","
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -11,6 +12,9 @@ Plugin 'sjl/gundo.vim'
 
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
+Plugin 'majutsushi/tagbar'
+nnoremap <leader>l :TagbarToggle<CR>
+
 let g:SuperTabLongestHighlight=1
 
 Plugin 'scrooloose/syntastic'
@@ -35,10 +39,7 @@ try
 catch
 endtry
 
-let mapleader=","
-
 set showbreak=>>
-
 
 if has("gui_running")
   set guioptions-=T " no toolbar
