@@ -1,0 +1,8 @@
+snippet url "url() definition" b
+url(r'^${1:path}$', '${2:view}',
+name='${3:name}'),
+endsnippet
+
+snippet urlinclude "(r'', include(..." b
+(r'', include('${1:urls_file}', namespace='${2:namespace}')),
+endsnippet
