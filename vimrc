@@ -6,6 +6,10 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-surround'
+Plugin 'sjl/gundo.vim'
+Plugin 'docunext/closetag.vim'
+Plugin 'skammer/vim-css-color'
 
 Plugin 'tpope/vim-surround'
 Plugin 'sjl/gundo.vim'
