@@ -14,6 +14,7 @@ Plugin 'lilydjwg/colorizer'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/python.vim'
 
 Plugin 'kien/rainbow_parentheses.vim'
 nnoremap b :RainbowParenthesesToggle <CR>
