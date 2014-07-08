@@ -19,7 +19,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 let g:better_whitespace_filetypes_blacklist=['mail']
 
 Plugin 'kien/rainbow_parentheses.vim'
-nnoremap b :RainbowParenthesesToggle <CR>
+nnoremap <leader>b :RainbowParenthesesToggle <CR>
 
 Plugin 'Lokaltog/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
