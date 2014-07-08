@@ -9,12 +9,14 @@ Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-surround'
 Plugin 'sjl/gundo.vim'
 Plugin 'docunext/closetag.vim'
-Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'lilydjwg/colorizer'
 Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/python.vim'
+
+Plugin 'ntpeters/vim-better-whitespace'
+let g:better_whitespace_filetypes_blacklist=['mail']
 
 Plugin 'kien/rainbow_parentheses.vim'
 nnoremap b :RainbowParenthesesToggle <CR>
