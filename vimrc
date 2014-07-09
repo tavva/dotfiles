@@ -18,6 +18,9 @@ Plugin 'vim-scripts/python.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 let g:better_whitespace_filetypes_blacklist=['mail']
 
+Plugin 'inside/vim-search-pulse'
+let g:vim_search_pulse_mode = 'pattern'
+
 Plugin 'kien/rainbow_parentheses.vim'
 nnoremap <leader>b :RainbowParenthesesToggle <CR>
 
