@@ -26,7 +26,7 @@ nnoremap <leader>b :RainbowParenthesesToggle <CR>
 
 Plugin 'Lokaltog/vim-easymotion'
 let g:EasyMotion_do_mapping = 0
-nmap f <Plug>(easymotion-bd-w)
+nmap <leader>f <Plug>(easymotion-bd-w)
 
 Plugin 'davidhalter/jedi-vim.git'
 Plugin 'ervandew/supertab'
