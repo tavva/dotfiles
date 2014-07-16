@@ -142,7 +142,7 @@ set smartcase
 
 " Search highlighting (and muting)
 set hlsearch
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <leader><space> :<C-u>nohlsearch<CR><C-l>
 
 " Tab navigation
 map tl :tabnext<CR>
