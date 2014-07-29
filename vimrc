@@ -125,6 +125,9 @@ imap jk <esc>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Automatic reloading
+autocmd! bufwritepost .vimrc source %
+
 " Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
