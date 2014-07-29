@@ -154,7 +154,7 @@ map td :tabclose<CR>
 set tags=~/tags
 map <leader>] :tnext<CR>
 
-set tabpagemax=15
+set tabpagemax=50
 
 set autochdir
 
