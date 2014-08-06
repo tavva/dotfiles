@@ -153,6 +153,8 @@ smt() {
 }
 
 gp() {
+	read \?"Have you added @login_required?"
+
 	if [ -x "./manage.py" ]
 	then
 		find . -name "*.pyc" -delete
