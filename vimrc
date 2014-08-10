@@ -15,6 +15,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/python.vim'
 
+Plugin 'Twinside/vim-hoogle'
+
 Plugin 'ntpeters/vim-better-whitespace'
 let g:better_whitespace_filetypes_blacklist=['mail']
 
