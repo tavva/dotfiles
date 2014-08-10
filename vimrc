@@ -16,6 +16,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/python.vim'
 
 Plugin 'Twinside/vim-hoogle'
+au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle 
+au BufNewFile,BufRead *.hs map <buffer> <C-F1> :HoogleClose<CR>
+au BufNewFile,BufRead *.hs map <buffer> <S-F1> :HoogleLine<CR>
 
 Plugin 'ntpeters/vim-better-whitespace'
 let g:better_whitespace_filetypes_blacklist=['mail']
