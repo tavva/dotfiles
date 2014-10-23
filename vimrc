@@ -14,6 +14,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/python.vim'
+Plugin 'esneider/YUNOcommit.vim'
 
 Plugin 'Twinside/vim-hoogle'
 au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle 
