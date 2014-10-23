@@ -392,6 +392,7 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 
 awful.util.spawn("setxkbmap -option caps:super")
+awful.util.spawn("xautolock -time 1 -locker '/home/ben/bin/lock_screen.sh'")
 
 --awful.util.spawn_with_shell("/home/ben/bin/fnotify.sh &")
 --awful.util.spawn_with_shell("/usr/share/android-notifier-desktop/run.sh &")
