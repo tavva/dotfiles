@@ -41,11 +41,6 @@ do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
 done
 
-for N in 1 2
-do
-    alias ps${N}="ssh -t ben@playfirestage${N}.com screen -Dax"
-done
-
 alias sacs="sudo apt-cache search"
 alias sagi="sudo apt-get install"
 
@@ -99,10 +94,6 @@ ff() {
     echo "find . -iname \"*$1*\""
     echo
     find . -iname "*$1*"
-}
-
-m() {
-    gvim -p /mnt/second/playfire/migrations/$1*.py
 }
 
 _ss() {
