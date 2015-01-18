@@ -11,6 +11,7 @@ require("naughty")
 require("debian.menu")
 
 require("volume")
+require("battery")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -184,6 +185,7 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
 	volume_widget,
+	battery_widget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
