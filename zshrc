@@ -133,10 +133,6 @@ sss() {
 	scrot --select ${SCREENSHOT} && gimp ${SCREENSHOT} &
 }
 
-pi() {
-	scp $1 ben@ben-phillips.net:/home/ben/sites/ben-phillips.net.static/public/b/$2
-}
-
 redirect () {
 	sudo iptables -t nat -A OUTPUT -d localhost -p tcp --dport ${2} -j REDIRECT --to-ports ${1}
 }
