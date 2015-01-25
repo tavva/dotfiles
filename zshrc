@@ -41,6 +41,11 @@ do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
 done
 
+for MACHINE in collymore torres
+do
+    alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.ben-phillips.net screen -Dax"
+done
+
 alias sacs="sudo apt-cache search"
 alias sagi="sudo apt-get install"
 
