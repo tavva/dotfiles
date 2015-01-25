@@ -26,6 +26,7 @@ function battery_status ()
 	return table.concat(output," ")
 end
 battery_widget.text = " " .. battery_status() .. " "
+
 battery_widget_timer=timer({timeout=17})
 battery_widget_timer:add_signal("timeout", function()
 	battery_widget.text = " " .. battery_status() .. " "
