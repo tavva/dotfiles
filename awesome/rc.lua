@@ -16,7 +16,7 @@ beautiful.init("/home/ben/dotfiles/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
-browser = "chromium-browser"
+browser = "google-chrome"
 secondary_browser = "iceweasel"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
