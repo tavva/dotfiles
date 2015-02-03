@@ -58,7 +58,6 @@ alias i="feh"
 alias g="git gui"
 alias ip="ipython"
 alias s="sudo --"
-alias a="e *.py"
 
 ep () {
 	find ${@:-.} \
