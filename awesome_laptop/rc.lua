@@ -272,7 +272,9 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86MonBrightnessDown", function ()
         awful.util.spawn("xbacklight -dec 15") end),
     awful.key({ }, "XF86MonBrightnessUp", function ()
-        awful.util.spawn("xbacklight -inc 15") end)
+        awful.util.spawn("xbacklight -inc 15") end),
+    awful.key({ "Shift", }, "XF86MonBrightnessDown", function ()
+        awful.util.spawn("xbacklight -set 3") end)
 )
 
 clientkeys = awful.util.table.join(
