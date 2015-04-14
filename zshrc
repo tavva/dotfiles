@@ -58,6 +58,7 @@ alias i="feh"
 alias g="git gui"
 alias ip="ipython"
 alias s="sudo --"
+alias a="ack-grep --skipped --text --smart-case --ignore-dir=\"migrations\""
 
 ep () {
 	find ${@:-.} \
