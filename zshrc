@@ -153,7 +153,6 @@ gp() {
 	then
 		find . -name "*.pyc" -delete
 		./manage.py test --failfast "${@}" || return ${?}
-		./manage.py lint
 	fi
 
 	git log origin.. --format="%s" | grep "^\.$" > /dev/null
