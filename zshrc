@@ -147,6 +147,9 @@ sm() {
 smt() {
 	cd ~/styleme/templates
 }
+dr() {
+	cd ~/dream/dream
+}
 
 gp() {
 	read \?"Have you added @login_required?"
