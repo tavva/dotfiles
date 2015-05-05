@@ -1,6 +1,6 @@
 c = get_config()
 
-from IPython.frontend.terminal.embed import InteractiveShellEmbed
+from IPython.terminal.embed import InteractiveShellEmbed
 
 STARTUP = r"""
 import os
