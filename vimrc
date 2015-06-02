@@ -160,6 +160,8 @@ map th :tabprev<CR>
 map tn :tabnew<CR>
 map td :tabclose<CR>
 
+map <leader>, :tabnew 
+
 " Tags and tag navigation
 set tags=~/tags
 map <leader>] :tnext<CR>
