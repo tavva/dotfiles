@@ -217,6 +217,6 @@ ticket() {
 
 startapp() {
 	mkdir $1
-	touch $1/__init__py
+	touch $1/__init__.py
 	touch $1/models.py
 }
