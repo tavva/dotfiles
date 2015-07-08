@@ -220,3 +220,9 @@ startapp() {
 	touch $1/__init__.py
 	touch $1/models.py
 }
+
+create_commands() {
+	mkdir -p management/commands
+	touch management/__init__.py
+	touch management/commands/__init__.py
+}
