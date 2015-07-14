@@ -218,7 +218,6 @@ ticket() {
 startapp() {
 	mkdir $1
 	touch $1/__init__.py
-	touch $1/models.py
 }
 
 create_commands() {
