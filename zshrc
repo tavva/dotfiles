@@ -225,3 +225,6 @@ create_commands() {
 	touch management/__init__.py
 	touch management/commands/__init__.py
 }
+
+autoload -U zmv
+alias mmv='noglob zmv -W'
