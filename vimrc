@@ -74,11 +74,11 @@ set showbreak=>>
 if has("gui_running")
   set guioptions-=T " no toolbar
   set guioptions-=m " no menubar
-  set gfn=Droid\ Sans\ Mono\ 11
+  set gfn=Droid\ Sans\ Mono\ 14
 
   " Quick font size shifting
   map <F11> <ESC>:set gfn=Droid\ Sans\ Mono\ 11<CR>
-  map <F12> <ESC>:set gfn=Droid\ Sans\ Mono\ 16<CR>
+  map <F12> <ESC>:set gfn=Droid\ Sans\ Mono\ 14<CR>
 
 endif
 
