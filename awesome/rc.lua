@@ -14,6 +14,10 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+vicious = require("vicious")
+
+highlight_colour = "#d7e0ea"
+
 -- Load Debian menu entries
 require("debian.menu")
 
@@ -120,6 +124,9 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
+batterywidget = wibox.widget.textbox()
+vicious.register(batterywidget, vicious.widgets.bat, " 🔋 ⌁<span color='" .. highlight_colour .. "'>$1$2</span>  | ", 67, "BAT0")
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -199,6 +206,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
