@@ -483,3 +483,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn_with_shell("setxkbmap -option caps:super")
 awful.util.spawn_with_shell("xflux -l 51.5380, -0.0585")
 awful.util.spawn_with_shell("/opt/urserver/urserver-start")
+awful.util.spawn_with_shell("xbindkeys")
