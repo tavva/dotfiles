@@ -25,7 +25,7 @@ RPROMPT='[%* on %W]'
 
 export EDITOR="vim"
 export PAGER="most"
-export PATH=$PATH:$PATH/bin:$HOME/go:$HOME/go/bin:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/.cabal/bin
+export PATH=$PATH:$PATH/bin:$HOME/bin:$HOME/go:$HOME/go/bin:$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$HOME/.cabal/bin
 export GOPATH=$HOME/go
 
 autoload -U select-word-style
