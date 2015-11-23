@@ -14,6 +14,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/python.vim'
+Plugin 'mxw/vim-jsx.git'
 Plugin 'esneider/YUNOcommit.vim'
 
 Plugin 'Twinside/vim-hoogle'
