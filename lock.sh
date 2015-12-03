@@ -39,7 +39,8 @@ convert -quality 10 -scale 10% -scale 1000% "$t" "$tm"
 rm "$t"
 
 ### Locking
-# -e is supported since i3lock 2.6 (will not validate empty passwords against PAM)
+# -e is supported since i3lock 2.6 (will not validate empty passwords against
+# PAM)
 # i3lock -u -e -i "$tm"
 i3lock -u -i "$tm"
 
