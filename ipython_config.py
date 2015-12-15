@@ -99,6 +99,27 @@ except ImportError:
 except Exception, e:
     print "W: Not setting up Django imports due to: %r" % e
     raise
+
+class redirect_output(object):
+    def __init__(self, stdout='', stderr=''):
+        self.stdout = stdout
+        self.stderr = stderr
+
+    def __enter__(self):
+        self.sys_stdout = sys.stdout
+        self.sys_stderr = sys.stderr
+
+        if self.stdout:
+            sys.stdout = open(self.stdout, 'w')
+        if self.stderr:
+            if self.stderr == self.stdout:
+                sys.stderr = sys.stdout
+            else:
+                sys.stderr = open(self.stderr, 'w')
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        sys.stdout = self.sys_stdout
+        sys.stderr = self.sys_stderr
 """
 
 c.TerminalIPythonApp.display_banner = False
