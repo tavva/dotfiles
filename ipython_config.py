@@ -28,10 +28,11 @@ except ImportError:
     pass
 
 try:
+    from django import apps
     from django.db import models, transaction, connection, connections
     from django.conf import settings
     from django.core.cache import cache
-    from django.utils.functional import memoize
+    from django.utils.lru_cache import lru_cache
     from django.contrib.auth.models import User
     from django.db.models.expressions import F
     from django.core.urlresolvers import reverse, resolve
@@ -64,17 +65,15 @@ try:
                 pass
 
         raise User.DoesNotExist()
-    u = memoize(u, {}, 1)
 
     try:
         def o(val):
             from styleme.orders.models import Order
             return Order.objects.get(pk=val)
-        o = memoize(o, {}, 1)
     except ImportError:
         pass
 
-    for model in models.get_models():
+    for model in apps.apps.get_models():
         globals()['%s_%s' % (model._meta.app_label, model._meta.object_name)] = model
         del model
 
