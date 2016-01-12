@@ -153,7 +153,7 @@ gp() {
 	if [ -x "./manage.py" ]
 	then
 		find . -name "*.pyc" -delete
-		./manage.py test --failfast "${@}" || return ${?}
+		./manage.py test --parallel --failfast "${@}" || return ${?}
 	fi
 
 	git log origin.. --format="%s" | grep "^\.$" > /dev/null
