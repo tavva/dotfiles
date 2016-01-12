@@ -14,7 +14,6 @@ which i3lock >/dev/null || (echo "Please install i3lock." && markerror)
 
 # Check for conflicting xscreensaver process
 x="$(ps auxwww | grep -i xscreensaver | grep -vE '(grep|\[defunct\]|xscreensaver-demo)' | wc -l)"
-if [[ "$x" -gt 0 ]]; then echo "xscreensaver detected. Please stop xscreensaver." && markerror; fi
 
 # Bailout on errors
 if [[ "$e" == 1 ]]; then
