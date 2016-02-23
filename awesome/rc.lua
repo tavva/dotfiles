@@ -14,6 +14,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+naughty.config.defaults.screen = 2
+
 vicious = require("vicious")
 
 highlight_colour = "#d7e0ea"
