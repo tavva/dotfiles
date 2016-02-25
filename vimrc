@@ -16,6 +16,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/python.vim'
 Plugin 'mxw/vim-jsx.git'
 Plugin 'esneider/YUNOcommit.vim'
+Plugin 'junegunn/fzf'
 
 Plugin 'Twinside/vim-hoogle'
 au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle 
@@ -210,3 +211,5 @@ cnoremap <c-e> <end>
 " Ctrl-[hl]: Move left/right by word
 cnoremap <c-b> <s-left>
 cnoremap <c-w> <s-right>
+
+map <c-p> :FZF ~/styleme/<cr>
