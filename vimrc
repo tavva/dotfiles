@@ -213,3 +213,4 @@ cnoremap <c-b> <s-left>
 cnoremap <c-w> <s-right>
 
 map <c-p> :FZF ~/styleme/<cr>
+map <c-l> :FZF ~/dream/<cr>
