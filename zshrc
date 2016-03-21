@@ -51,11 +51,10 @@ alias sagi="sudo apt-get install"
 
 alias bp="ssh -t ben@174.143.153.134 screen -Dax"
 
-alias e="gvim -p"
+alias e="vim --remote-silent"
 alias se="sudo gvim -p"
 alias v="vim"
 alias i="feh"
-alias g="vim --remote-silent"
 alias ip="ipython"
 alias s="sudo --"
 alias a="ack-grep --skipped --text --smart-case --ignore-dir=\"migrations\""
@@ -67,7 +66,7 @@ ep () {
 		-not \( -name "__init__.py" -size -2c \) \
 		-not \( -lname '*' \) \
 		-print0 \
-	| xargs -0r gvim -p
+	| xargs -0r vim --remote-silent
 }
 
 alias gb='git branch'
