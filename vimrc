@@ -17,6 +17,7 @@ Plugin 'vim-scripts/python.vim'
 Plugin 'mxw/vim-jsx.git'
 Plugin 'esneider/YUNOcommit.vim'
 Plugin 'junegunn/fzf'
+Plugin 'ConradIrwin/vim-bracketed-paste'
 
 Plugin 'Twinside/vim-hoogle'
 au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle 
