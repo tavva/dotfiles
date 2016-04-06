@@ -175,11 +175,11 @@ ssw() {
 imgur() {
 	for FILENAME in "$@"
 	do
-		curl --silent -F "image=@${FILENAME}" \
+		curl --silent -H "Authorization: Client-ID ad338f3eaae9baa" \
+            -F "image=@${FILENAME}" \
 			-F "key=cca1d7195d0d8bd11f622cae37d375e0" \
-			http://api.imgur.com/2/upload.xml | \
-			grep -Eo "<original>(.)*</original>" | \
-			grep -Eo "http://i.imgur.com/[^<]*";
+			https://api.imgur.com/3/upload.xml | \
+			grep -Po "<link>\K[^<]*";
 	done
 }
 
