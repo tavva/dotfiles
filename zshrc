@@ -4,7 +4,7 @@ HISTSIZE=50000
 SAVEHIST=$HISTSIZE
 
 if [ -n "$DISPLAY" ]; then
-	xset b off
+    xset b off
 fi
 
 # options
@@ -60,13 +60,13 @@ alias s="sudo --"
 alias a="ack-grep --skipped --text --smart-case --ignore-dir=\"migrations\""
 
 ep () {
-	find ${@:-.} \
-		-maxdepth 1 \
-		-name "*.py" \
-		-not \( -name "__init__.py" -size -2c \) \
-		-not \( -lname '*' \) \
-		-print0 \
-	| xargs -0r vim --remote-silent
+    find ${@:-.} \
+        -maxdepth 1 \
+        -name "*.py" \
+        -not \( -name "__init__.py" -size -2c \) \
+        -not \( -lname '*' \) \
+        -print0 \
+    | xargs -0r vim --remote-silent
 }
 
 alias gb='git branch'
@@ -101,128 +101,128 @@ ff() {
 }
 
 _ss() {
-	SCREENSHOT="$(mktemp)"
-	rm -f ${SCREENSHOT}
-	SCREENSHOT="${SCREENSHOT}.png"
+    SCREENSHOT="$(mktemp)"
+    rm -f ${SCREENSHOT}
+    SCREENSHOT="${SCREENSHOT}.png"
 }
 
 ss () {
-	_ss
+    _ss
 
-	printf "Taking screenshot in "
+    printf "Taking screenshot in "
 
-	TIME=3
-	while [ ${TIME} -gt 0 ]
-	do
-		printf "%d " ${TIME}
-		sleep 1
-		TIME=$((TIME - 1))
-	done
+    TIME=3
+    while [ ${TIME} -gt 0 ]
+    do
+        printf "%d " ${TIME}
+        sleep 1
+        TIME=$((TIME - 1))
+    done
 
-	echo
+    echo
 
-	echo ${SCREENSHOT}
+    echo ${SCREENSHOT}
 
-	scrot ${SCREENSHOT} && gimp ${SCREENSHOT} &
+    scrot ${SCREENSHOT} && gimp ${SCREENSHOT} &
 }
 
 sss() {
-	_ss
-	echo "Select a window. Screenshot will be saved to: ${SCREENSHOT}"
-	scrot --select ${SCREENSHOT} && gimp ${SCREENSHOT} &
+    _ss
+    echo "Select a window. Screenshot will be saved to: ${SCREENSHOT}"
+    scrot --select ${SCREENSHOT} && gimp ${SCREENSHOT} &
 }
 
 redirect () {
-	sudo iptables -t nat -A OUTPUT -d localhost -p tcp --dport ${2} -j REDIRECT --to-ports ${1}
+    sudo iptables -t nat -A OUTPUT -d localhost -p tcp --dport ${2} -j REDIRECT --to-ports ${1}
 }
 
 sm() {
-	cd ~/styleme/styleme
+    cd ~/styleme/styleme
 }
 smt() {
-	cd ~/styleme/templates
+    cd ~/styleme/templates
 }
 dr() {
-	cd ~/dream/dream
+    cd ~/dream/dream
 }
 
 gp() {
-	read \?"Have you added @login_required?"
+    read \?"Have you added @login_required?"
 
-	if [ -x "./manage.py" ]
-	then
-		find . -name "*.pyc" -delete
-		./manage.py test --parallel --failfast "${@}" || return ${?}
-	fi
+    if [ -x "./manage.py" ]
+    then
+        find . -name "*.pyc" -delete
+        ./manage.py test --parallel --failfast "${@}" || return ${?}
+    fi
 
-	git log origin.. --format="%s" | grep "^\.$" > /dev/null
-	retval=$?
-	if [ "$retval" -ne "0" ]; then
-		git push
-	else
-		echo "You have unmanaged commits, please add messages."
-	fi
+    git log origin.. --format="%s" | grep "^\.$" > /dev/null
+    retval=$?
+    if [ "$retval" -ne "0" ]; then
+        git push
+    else
+        echo "You have unmanaged commits, please add messages."
+    fi
 }
 
 ssw() {
-	echo "Select a window..."
-	_target="$(mktemp).png"
-	scrot --select ${_target}
-	imgur ${_target}
+    echo "Select a window..."
+    _target="$(mktemp).png"
+    scrot --select ${_target}
+    imgur ${_target}
 }
 
 imgur() {
-	for FILENAME in "$@"
-	do
-		curl --silent -H "Authorization: Client-ID ad338f3eaae9baa" \
+    for FILENAME in "$@"
+    do
+        curl --silent -H "Authorization: Client-ID ad338f3eaae9baa" \
             -F "image=@${FILENAME}" \
-			-F "key=cca1d7195d0d8bd11f622cae37d375e0" \
-			https://api.imgur.com/3/upload.xml | \
-			grep -Po "<link>\K[^<]*";
-	done
+            -F "key=cca1d7195d0d8bd11f622cae37d375e0" \
+            https://api.imgur.com/3/upload.xml | \
+            grep -Po "<link>\K[^<]*";
+    done
 }
 
 work() {
-	if [ -f "/etc/hosts.play" ]
-	then
-		return 1
-	fi
+    if [ -f "/etc/hosts.play" ]
+    then
+        return 1
+    fi
 
-	sudo cp /etc/hosts /etc/hosts.play
+    sudo cp /etc/hosts /etc/hosts.play
 
-	for HOSTNAME in reddit.com news.ycombinator.com facebook.com news.bbc.co.uk twitter.com football365.com lichess.org chess.com
-	do
-		echo "127.0.0.1	$HOSTNAME www.$HOSTNAME" | sudo tee -a /etc/hosts >/dev/null
-	done
+    for HOSTNAME in reddit.com news.ycombinator.com facebook.com news.bbc.co.uk twitter.com football365.com lichess.org chess.com
+    do
+        echo "127.0.0.1 $HOSTNAME www.$HOSTNAME" | sudo tee -a /etc/hosts >/dev/null
+    done
 
-	echo "I: Entered work mode"
+    echo "I: Entered work mode"
 }
 
 play() {
-	if [ -f "/etc/hosts.play" ]
-	then
-		echo "I: Leaving work mode."
-		sudo mv /etc/hosts.play /etc/hosts
-	fi
+    if [ -f "/etc/hosts.play" ]
+    then
+        echo "I: Leaving work mode."
+        sudo mv /etc/hosts.play /etc/hosts
+    fi
 }
 
 commit() {
-	google-chrome https://github.com/thread/styleme/commit/$1
+    google-chrome https://github.com/thread/styleme/commit/$1
 }
 
 ticket() {
-	google-chrome https://thread.fogbugz.com/default.asp?$1
+    google-chrome https://thread.fogbugz.com/default.asp?$1
 }
 
 startapp() {
-	mkdir $1
-	touch $1/__init__.py
+    mkdir $1
+    touch $1/__init__.py
 }
 
 create_commands() {
-	mkdir -p management/commands
-	touch management/__init__.py
-	touch management/commands/__init__.py
+    mkdir -p management/commands
+    touch management/__init__.py
+    touch management/commands/__init__.py
 }
 
 autoload -U zmv
