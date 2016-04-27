@@ -167,7 +167,7 @@ gp() {
 ssw() {
     echo "Select a window..."
     _target="$(mktemp).png"
-    scrot --select ${_target}
+    scrot --select ${_target} --delay 3 --count
     imgur ${_target}
 }
 
