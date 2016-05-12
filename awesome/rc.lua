@@ -295,6 +295,7 @@ globalkeys = awful.util.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end),
 
+    -- Media keys
     awful.key({ }, "XF86AudioRaiseVolume", function ()
         awful.util.spawn("amixer set Master 9%+") end),
     awful.key({ }, "XF86AudioLowerVolume", function ()
