@@ -5,10 +5,10 @@ set realname = "Ben Phillips"
 
 account-hook imap://gmail/ "set
 
-set imap_user = "ben@othernation.com"
+set imap_user = "ben@thread.com"
 set imap_pass = $my_mail_password
 
-set smtp_url = "smtp://ben@othernation.com@smtp.gmail.com:587/"
+set smtp_url = "smtp://ben@thread.com@smtp.gmail.com:587/"
 set smtp_pass = $my_mail_password
 
 set folder = "imaps://imap.gmail.com:993"
