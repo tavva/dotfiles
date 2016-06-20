@@ -41,7 +41,7 @@ do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
 done
 
-for MACHINE in collymore torres
+for MACHINE in collymore torres toshack
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.ben-phillips.net screen -Dax"
 done
