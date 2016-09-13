@@ -202,6 +202,8 @@ endfunction
 
 nnoremap <leader>s :.,.s/.*/\=ReflowArgs(submatch(0))/g<CR>:noh<CR>
 
+map <leader>' :%s:’:':g<CR>
+
 " Command line mode
 "===============
 
