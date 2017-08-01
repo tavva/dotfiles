@@ -50,7 +50,7 @@ try:
 
 except ImportError:
     pass
-except Exception, e:
+except Exception as e:
     print "W: Not setting up django stuff due to: %r" % e
 """)
 

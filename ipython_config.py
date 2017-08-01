@@ -95,7 +95,7 @@ try:
 
 except ImportError:
     pass
-except Exception, e:
+except Exception as e:
     print "W: Not setting up Django imports due to: %r" % e
     raise
 
