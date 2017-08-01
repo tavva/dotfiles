@@ -51,7 +51,7 @@ try:
 except ImportError:
     pass
 except Exception as e:
-    print "W: Not setting up django stuff due to: %r" % e
+    print("W: Not setting up django stuff due to: %r" % e)
 """)
 
 import ipy_greedycompleter

@@ -13,7 +13,6 @@ import time
 import posix
 import random
 import urllib
-import urllib2
 import datetime
 import itertools
 import subprocess
@@ -42,7 +41,7 @@ try:
 
     def u(val):
         # For ipython
-        if not isinstance(val, basestring):
+        if not isinstance(val, str):
             return User.objects.get(pk=val)
 
         if '@' in val:
@@ -96,7 +95,7 @@ try:
 except ImportError:
     pass
 except Exception as e:
-    print "W: Not setting up Django imports due to: %r" % e
+    print("W: Not setting up Django imports due to: %r" % e)
     raise
 
 class redirect_output(object):
