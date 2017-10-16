@@ -36,7 +36,7 @@ alias page="vim -u /usr/share/vim/vim73/macros/less.vim"
 alias acs="apt-cache search"
 alias sagi="sudo apt-get install"
 
-for MACHINE in andre burberry ford westwood sander conran hackett prada everest beckham richmond spencer simons anderson lanvin smith bailey ashley galliano nutter kobo
+for MACHINE in andre burberry ford westwood sander conran hackett prada everest beckham richmond spencer simons anderson lanvin smith bailey ashley galliano nutter kobo jones lagerfeld
 
 do
     alias ${MACHINE}="ssh -t ben@${MACHINE}.adm.thread.com screen -Dax"
