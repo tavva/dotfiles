@@ -488,6 +488,7 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+awful.util.spawn_with_shell("~/.screenlayout/standard.sh")
 awful.util.spawn_with_shell("setxkbmap -option caps:super")
 awful.util.spawn_with_shell("xflux -l 51.5380, -0.0585")
 awful.util.spawn_with_shell("/opt/urserver/urserver-start")
