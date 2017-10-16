@@ -84,9 +84,9 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
-if beautiful.wallpaper then
+if beautiful.wallpaper_theme then
     for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+        gears.wallpaper.maximized("/home/ben/.config/awesome/wallpapers/" .. beautiful.wallpaper_theme .. s .. ".jpg", s, true)
     end
 end
 -- }}}
