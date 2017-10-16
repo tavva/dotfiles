@@ -262,6 +262,10 @@ globalkeys = awful.util.table.join(
             end
         end),
 
+    awful.key({ modkey, "Shift" }, "f", function ()
+        mywibox[mouse.screen].visible = not mywibox[mouse.screen].visible
+    end),
+
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "b",      function () awful.util.spawn(browser)    end),
