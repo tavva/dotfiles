@@ -227,6 +227,11 @@ create_commands() {
     touch management/commands/__init__.py
 }
 
+ms() {
+    google-chrome "https://mail.google.com/mail/u/0/#inbox" --new-window
+    google-chrome "https://thread.slack.com/"
+}
+
 autoload -U zmv
 alias mmv='noglob zmv -W'
 
