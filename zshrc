@@ -237,3 +237,5 @@ alias mmv='noglob zmv -W'
 
 export WORKON_HOME=~/.envs
 source /usr/local/bin/virtualenvwrapper.sh
+
+export PRINTER=HP_Officejet_Pro_8600
