@@ -138,6 +138,7 @@ redirect () {
 }
 
 sm() {
+    workon styleme3
     cd ~/styleme/styleme
 }
 smt() {
@@ -228,3 +229,6 @@ create_commands() {
 
 autoload -U zmv
 alias mmv='noglob zmv -W'
+
+export WORKON_HOME=~/.envs
+source /usr/local/bin/virtualenvwrapper.sh
